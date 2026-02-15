@@ -16,7 +16,7 @@ const Section4 = () => {
             duration: 1,
             stagger: 1,
             scrollTrigger: {
-                trigger: boxRef.current,
+                trigger: container.current,
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
@@ -26,14 +26,14 @@ const Section4 = () => {
     }, { scope: container });
     return (
         <div ref={container} className='bg-[#d4cee7] flex flex-col-reverse md:flex-row min-h-screen md:h-[110vh]'>
-            <div ref={boxRef} className="right w-full md:w-[50%] h-[60vh] md:h-full">
+            <div className="right w-full md:w-[50%] h-[60vh] md:h-full">
                 <img
                     className='h-full w-full object-cover'
                     src="/images/office2.jpeg"
                     alt="A calm therapist room"
                 />
             </div>
-            <div className="left w-full md:w-[50%] relative flex flex-col justify-center items-center">
+            <div ref={boxRef} className="left w-full md:w-[50%] relative flex flex-col justify-center items-center">
                 <div className='flex flex-col items-start justify-center gap-4 sm:gap-5 md:gap-7 p-6 sm:p-8 md:p-10 lg:p-12 leading-relaxed'>
                     <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold'>
                         A Quiet Space to Reconnect

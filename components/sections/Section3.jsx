@@ -17,7 +17,7 @@ const Section3 = () => {
             duration: 1,
             stagger: 1,
             scrollTrigger: {
-                trigger: boxRef.current,
+                trigger: container.current,
                 start: "top 80%",
                 end: "bottom 20%",
                 toggleActions: "play none none reverse",
