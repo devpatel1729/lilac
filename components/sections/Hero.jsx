@@ -31,7 +31,7 @@ const Hero = () => {
         />
       </div>
       <div className="right w-full md:w-[55%] flex flex-col items-center justify-center gap-4 sm:gap-5 md:gap-6 px-4 py-8 md:py-0 order-1 md:order-2">
-        <p className='text-2xl sm:text-4xl md:text-5xl lg:text-[7vh] leading-[110%] font-extrabold text-center w-full sm:w-[85%] md:w-[70%] lg:w-[60%]'>
+        <p className='text-2xl sm:text-4xl md:text-5xl lg:text-[7vh] leading-[110%] font-extrabold text-center w-full sm:w-[85%] md:w-[70%] lg:w-[80%]'>
           Clinical Psychologist for High-Achievers & Professionals
         </p>
         <p className='text-sm sm:text-base font-bold text-center'>
