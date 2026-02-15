@@ -4,23 +4,23 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fbf6f1] text-[#223622]">
+    <footer className="bg-[#f7f5f0] text-[#223622]">
 
       {/* TOP SECTION */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 py-12 sm:py-16 md:py-20 grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 
         {/* LEFT */}
         <div className="space-y-4 sm:space-y-5 md:space-y-6">
-          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold">Lilac Template</h2>
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-semibold">Dr. Maya Reynolds, PsyD</h2>
 
           <div className="text-xs sm:text-sm space-y-1">
-            <p>123 Example Road</p>
-            <p>Minneapolis, MN</p>
+            <p>123rd Street 45 W</p>
+            <p>Santa Monica, CA 90401</p>
           </div>
 
           <div className="text-xs sm:text-sm space-y-1 underline">
-            <p className="cursor-pointer hover:opacity-70 transition">email@example.com</p>
-            <p className="cursor-pointer hover:opacity-70 transition">(555) 555-5555</p>
+            <p className="cursor-pointer hover:opacity-70 transition">drmayareynolds@gmail.com</p>
+            <p className="cursor-pointer hover:opacity-70 transition">(310) 555-5555</p>
           </div>
         </div>
 
@@ -54,12 +54,12 @@ const Footer = () => {
           <p className="cursor-pointer hover:opacity-70 transition">Disclaimer</p>
         </div>
 
-        <p className="text-xs sm:text-sm">
+        {/* <p className="text-xs sm:text-sm">
           Website Template Credits: Go Bloom Creative
-        </p>
+        </p> */}
 
         <p className="text-xs sm:text-sm">
-          All Rights Reserved © 2024 Your Business Name Here, LLC.
+          All Rights Reserved © Dr. Maya Reynolds
         </p>
 
       </div>

@@ -1,31 +1,53 @@
 "use client";
 import { useState } from "react";
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
     {
         q: "Education",
-        a: "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
+        a: "I hold a Doctor of Psychology (PsyD), emphasizing clinical practice and applying psychological theory to real-world challenges.",
     },
     {
         q: "Licensure",
-        a: "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
+        a: "I am a Licensed Clinical Psychologist authorized to practice throughout the state of California.",
     },
     {
         q: "Certifications",
-        a: "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moluccella gladiolus cirsium trollius anthurium prunus delphinium achillea.",
+        a: "My advanced training includes EMDR (Trauma), CBT (Cognitive Behavioral Therapy), and Mindfulness-Based Stress Reduction.",
     },
 ];
 
 const Section6 = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const container = useRef();
+    const boxRef = useRef();
+    useGSAP(() => {
+        gsap.from(container.current, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+            scrollTrigger: {
+                trigger: boxRef.current,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse",
+                //markers: true,
+            }
+        });
+    }, { scope: container });
 
     const toggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
     return (
-        <div className="w-full flex items-center justify-center bg-[#e5e0da] px-4 sm:px-6 md:px-8">
-            <div className="max-w-xl w-full py-12 sm:py-16 md:py-20 flex flex-col">
+        <div ref={container} className="w-full flex items-center justify-center bg-[#e5e0da] px-4 sm:px-6 md:px-8">
+            <div ref={boxRef} className="max-w-xl w-full py-12 sm:py-16 md:py-20 flex flex-col">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 sm:mb-8 md:mb-10 w-full text-center">
                     My Professional Background
                 </h2>
@@ -44,7 +66,7 @@ const Section6 = () => {
                                 <span className="text-lg sm:text-xl font-bold">
                                     {item.q}
                                 </span>
-                                <span className="relative w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center flex-shrink-0">
+                                <span className="relative w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center shrink-0">
 
                                     <span
                                         className={`absolute h-0.5 w-3 sm:w-4 bg-[#2d3b2f] transition-transform duration-300`}
